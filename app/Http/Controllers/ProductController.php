@@ -7,6 +7,14 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+
+    public function home() {
+        $products = Product::paginate(15);
+
+        return view('welcome', ['products' => $products]);
+    }
+
+
     /**
      * Display a listing of the resource.
      *
