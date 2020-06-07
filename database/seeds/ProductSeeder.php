@@ -5,7 +5,7 @@ use Illuminate\Database\Seeder;
 class ProductSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Run the database seeds for the table Products.
      *
      * @return void
      */
@@ -22,6 +22,5 @@ class ProductSeeder extends Seeder
                     'price' => $faker->randomFloat(2, 0, 1000)
                 ]);
         }
-
     }
 }
