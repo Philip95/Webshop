@@ -18,7 +18,7 @@
     <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Webshop</a>
+        <a class="navbar-brand" href="#">Katzen-Webshop</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -47,26 +47,9 @@
         </div>
     </nav>
 
-        <div class="position-ref full-height">
-            <div class="content">
-                <div class="title m-b-md">
-                    Webshop
-                </div>
+    <main class="py-4">
+        @yield('content')
+    </main>
 
-                <div class="float-left">
-                    @foreach($products as $product)
-                        <div class="position-ref float-left" id="products">
-                            <img src="{{asset('spielregeln-katze.jpg')}}" alt="Product">
-                            <p><b>{{$product->name}}</b></p>
-                            <span> <b>Beschreibung:</b> {{$product->description}}</span> <br>
-                            <p> <b>Preis:</b> {{$product->price}} &#x80; </p>
-                            <button>
-                                Zum Warenkorb hinzuf&uuml;gen
-                            </button>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
     </body>
 </html>

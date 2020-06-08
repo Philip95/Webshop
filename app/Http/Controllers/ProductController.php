@@ -11,7 +11,7 @@ class ProductController extends Controller
     public function home() {
         $products = Product::paginate(15);
 
-        return view('welcome', ['products' => $products]);
+        return view('produktuebersicht', ['products' => $products]);
     }
 
 
