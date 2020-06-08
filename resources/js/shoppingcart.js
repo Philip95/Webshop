@@ -13,16 +13,21 @@ for(let i = 0; i < sessionStorage.length; i++) {
         },
         dataType: 'JSON',
         success: function(result){
-
+            console.log(result)
             overallItems++;
             preis = preis + parseFloat(result.price);
+
+            let methode = 'removeFromShoppingCart(' + result.p_id + ')';
+            let id = result.p_id;
 
             let $tr = $('<tr class="result">').append(
                 $('<td>').text(result.item_number),
                 $('<td>').text(result.name),
                 $('<td>').text(result.description),
                 $('<td>').text(result.price + " €"),
+                $('<td>').append('<button class="delete" id="'+ (id) +'" onclick="'+ (methode) +'">')
             ).appendTo('#warenkorb');
+
 
             if(counter === (sessionStorage.length - 1)) {
                 let tr_last_line = $('<tr>').append(
@@ -34,6 +39,10 @@ for(let i = 0; i < sessionStorage.length; i++) {
             } else {
                 counter++;
             }
+
+            $('.delete').html('Delete');
         }
     });
 }
+
+
