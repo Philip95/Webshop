@@ -2,5 +2,6 @@
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/js/bootstrap.js": "/js/bootstrap.js",
+    "/js/shoppingcart.js": "/js/shoppingcart.js",
     "/css/all.css": "/css/all.css"
 }
