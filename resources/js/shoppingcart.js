@@ -13,7 +13,6 @@ for(let i = 0; i < sessionStorage.length; i++) {
         },
         dataType: 'JSON',
         success: function(result){
-            console.log(result)
             overallItems++;
             preis = preis + parseFloat(result.price);
 
@@ -27,8 +26,7 @@ for(let i = 0; i < sessionStorage.length; i++) {
                 $('<td>').text(result.price + " €"),
                 $('<td>').append('<button class="delete" id="'+ (id) +'" onclick="'+ (methode) +'">')
             ).appendTo('#warenkorb');
-
-
+            
             if(counter === (sessionStorage.length - 1)) {
                 let tr_last_line = $('<tr>').append(
                     $('<td>').text(""),
