@@ -26,7 +26,7 @@ for(let i = 0; i < sessionStorage.length; i++) {
                 $('<td>').text(result.price + " €"),
                 $('<td>').append('<button class="delete" id="'+ (id) +'" onclick="'+ (methode) +'">')
             ).appendTo('#warenkorb');
-            
+
             if(counter === (sessionStorage.length - 1)) {
                 let tr_last_line = $('<tr>').append(
                     $('<td>').text(""),
@@ -38,7 +38,7 @@ for(let i = 0; i < sessionStorage.length; i++) {
                 counter++;
             }
 
-            $('.delete').html('Delete');
+            $('.delete').html('Entfernen');
         }
     });
 }
