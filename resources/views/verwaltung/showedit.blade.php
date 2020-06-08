@@ -3,7 +3,7 @@
 @section('content')
     <form action="{{ route('update') }}" method="POST">
         @csrf
-
+        <input type="hidden" value="{{ $product->p_id }}" name="p_id">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8">

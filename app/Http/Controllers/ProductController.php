@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class ProductController extends Controller
 {
@@ -84,6 +85,12 @@ class ProductController extends Controller
         return view('verwaltung.showedit', ['product'=> $product]);
     }
 
+    /**
+     * Update a certain product
+     *
+     * @param Request $request
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
     public function update(Request $request) {
         $product = Product::find($request->p_id);
 
