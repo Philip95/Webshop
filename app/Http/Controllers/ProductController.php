@@ -86,7 +86,7 @@ class ProductController extends Controller
     }
 
     /**
-     * Update a certain product
+     * Update a certain product and redirect to the overview blade
      *
      * @param Request $request
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
