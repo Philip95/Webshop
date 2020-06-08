@@ -104,4 +104,13 @@ class ProductController extends Controller
         return redirect( route('verwalten') );
     }
 
+    public function warenkorb() {
+        return view('shoppingCart');
+    }
+
+    public function product(Request $request) {
+        return Product::find($_GET['id']);
+    }
+
+
 }

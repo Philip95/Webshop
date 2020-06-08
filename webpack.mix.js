@@ -16,4 +16,3 @@ mix.js('resources/js/app.js', 'public/js')
 
 mix.js('resources/js/bootstrap.js', 'public/js');
 mix.styles('resources/css/css.css', 'public/css/all.css');
-mix.js('resources/js/webshop.js', 'public/js');

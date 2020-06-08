@@ -14,7 +14,7 @@
         <script src="{{ mix('js/bootstrap.js') }}"></script>
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
-        <script src="{{ mix('js/webshop.js') }}"></script>
+        <script src="{{ asset('js/webshop.js') }}"></script>
 
     </head>
     <body>
@@ -40,7 +40,7 @@
             </ul>
 
             <button>
-                <img src="{{asset('shopping-cart-icon-png-1.png')}}" class="shoppingcart" alt="Warenkorb">
+                <a href="{{ route('warenkorb') }}"> <img src="{{asset('shopping-cart-icon-png-1.png')}}" class="shoppingcart" alt="Warenkorb"></a>
             </button>
         </div>
     </nav>

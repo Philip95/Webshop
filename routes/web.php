@@ -24,3 +24,6 @@ Route::post('/produkte/newProduct/insert', 'ProductController@insert')->name('in
 
 Route::get('/produkte/editForm/{p_id?}', 'ProductController@showeditForm')->name('editform');
 Route::post('/produkte/editForm/save', 'ProductController@update')->name('update');
+
+Route::get('/warenkorb', 'ProductController@Warenkorb')->name('warenkorb');
+Route::get('/warenkorb/produkt', 'ProductController@product')->name('getProduct');
