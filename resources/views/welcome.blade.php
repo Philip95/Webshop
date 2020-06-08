@@ -10,9 +10,11 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <link rel="stylesheet" href="{{ mix('css/all.css') }}">
-        <script src="{{ mix('js/webshop.js') }}"></script>
+
         <script src="{{ mix('js/bootstrap.js') }}"></script>
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+
+        <script src="{{ mix('js/webshop.js') }}"></script>
 
     </head>
     <body>
@@ -46,6 +48,8 @@
     <main class="py-4">
         @yield('content')
     </main>
+
+
 
     </body>
 </html>

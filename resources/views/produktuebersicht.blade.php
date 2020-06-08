@@ -21,21 +21,19 @@
                     <p><b>{{$product->name}}</b></p>
                     <span> <b>Beschreibung:</b> {{$product->description}}</span> <br>
                     <p> <b>Preis:</b> {{$product->price}} &#x80; </p>
-                    <button>
+                    <button onclick="addToShoppingCart({{$product->p_id}})">
                         Zum Warenkorb hinzuf&uuml;gen
                     </button>
                 </div>
             @endforeach
                 <div class="container justify-content-center clear_center position-ref d-flex">
-                    <div class="position-ref">
+                    <div>
                         {{$products->links()}}
                     </div>
                 </div>
         </div>
     </div>
 </div>
-
-
 
 
 @endsection
