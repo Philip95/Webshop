@@ -31,7 +31,7 @@ class ProductController extends Controller
 
     /**
      * Delete a specific product
-     * After deleting the user will be redirected to the overview
+     * After deleting the user will be redirected to the overview blade
      *
      * @param Request $request
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
@@ -70,7 +70,32 @@ class ProductController extends Controller
         $product->save();
 
         return redirect( route('verwalten') );
+    }
 
+    /**
+     * Returning the product, which should be updated with the specific blade
+     *
+     * @param Request $request
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function showeditForm(Request $request) {
+        $product = Product::find($request->p_id);
+
+        return view('verwaltung.showedit', ['product'=> $product]);
+    }
+
+    public function update(Request $request) {
+        $product = Product::find($request->p_id);
+
+        $product->name = $request->name;
+        $product->item_number = $request->item_number;
+        $product->description = $request->description;
+        $product->price = $request->price;
+        $product->picture = "";
+
+        $product->save();
+
+        return redirect( route('verwalten') );
     }
 
 }

@@ -19,7 +19,7 @@
                             <td>{{ $product->name }}</td>
                             <td>{{ $product->description }}</td>
                             <td>{{ $product->price }} &#x80;</td>
-                            <td><input class="btn btn-success" type="image" src="{{asset('pencil.png')}}" formaction="?"></td>
+                            <td><input class="btn btn-success" type="image" src="{{asset('pencil.png')}}" formaction="{{ route('editform', ['p_id' => $product->p_id]) }}"></td>
                             <td><input class="btn btn-danger" type="image" src="{{asset('trash.png')}}" value="{{$product->p_id}}" onclick="return confirm('Product wirklich löschen?')" formaction="{{ route('delete_product', ['p_id' => $product->p_id]) }}"></td>
                         </tr>
                     @endforeach

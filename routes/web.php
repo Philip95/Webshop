@@ -21,3 +21,6 @@ Route::get('/produkte/delete/{p_id?}', 'ProductController@delete')->name('delete
 Route::get('/produkte/newProduct', 'ProductController@showInsertForm')->name('insert_form');
 
 Route::post('/produkte/newProduct/insert', 'ProductController@insert')->name('insert');
+
+Route::get('/produkte/editForm/{p_id?}', 'ProductController@showeditForm')->name('editform');
+Route::post('/produkte/editForm/save', 'ProductController@update')->name('update');
