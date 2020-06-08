@@ -26,8 +26,10 @@
                     </button>
                 </div>
             @endforeach
-                <div class="position-ref clear_center">
-                    {{$products->links()}}
+                <div class="container justify-content-center clear_center position-ref d-flex">
+                    <div class="position-ref">
+                        {{$products->links()}}
+                    </div>
                 </div>
         </div>
     </div>

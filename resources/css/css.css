@@ -14,9 +14,6 @@ html, body {
 
 .clear_center {
     clear: both;
-    width: 100px;
-    height: 36px;
-    margin: 0 auto;
 }
 
 .position-ref {
