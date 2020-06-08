@@ -14,7 +14,7 @@
                             <div class="form-group row">
                                 <div class="col-md-10 col-lg-6">
 
-                                    <input id="name" type="text" modifier="transparent" placeholder="Name" float @error('vorname') is-invalid @enderror name="name" required autocomplete="name" autofocus />
+                                    <input id="name" type="text" modifier="transparent" placeholder="Name" float @error('name') is-invalid @enderror name="name" required autocomplete="name" autofocus />
 
                                         @error('name')
                                         <span class="invalid-feedback" role="alert">

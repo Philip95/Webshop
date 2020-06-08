@@ -1,7 +1,7 @@
 @extends('welcome')
 
 @section('content')
-<div class="position-ref full-height">
+<div class="position-ref">
     <div class="content">
         <div class="title m-b-md">
             Webshop
@@ -26,8 +26,14 @@
                     </button>
                 </div>
             @endforeach
+                <div class="position-ref clear_center">
+                    {{$products->links()}}
+                </div>
         </div>
     </div>
-    <span>Seite {{$products->links()}}</span>
 </div>
+
+
+
+
 @endsection
