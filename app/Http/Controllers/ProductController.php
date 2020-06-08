@@ -52,4 +52,25 @@ class ProductController extends Controller
         return view('verwaltung.newProduct');
     }
 
+    /**
+     * Insert a new Product, since the pictures are loading forever, the picture attribute will be empty
+     *
+     * @param Request $request
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function insert(Request $request) {
+        $product = Product::create([
+            'name' => $request->name,
+            'item_number' => $request->item_number,
+            'description' => $request->description,
+            'price' => $request->price,
+            'picture' => ""
+        ]);
+
+        $product->save();
+
+        return redirect( route('verwalten') );
+
+    }
+
 }
