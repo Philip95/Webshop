@@ -7,87 +7,41 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-
+    /**
+     * Display all products, but not more than 15 per page
+     *
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function home() {
         $products = Product::paginate(15);
 
         return view('produktuebersicht', ['products' => $products]);
     }
 
-
     /**
-     * Display a listing of the resource.
+     * Returning all products for the product overview
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function index()
-    {
-        //
+    public function overview() {
+        $products = Product::all();
+
+        return view('verwaltung.uebersicht', ['products' => $products]);
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Delete a specific product
+     * After deleting the user will be redirected to the overview
      *
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function create()
-    {
-        //
+    public function delete(Request $request) {
+        $product = Product::find($request->p_id);
+        $product->delete();
+
+        return redirect(route('verwalten'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Product  $product
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Product $product)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Product  $product
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Product $product)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Product  $product
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Product $product)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Product  $product
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Product $product)
-    {
-        //
-    }
 }
