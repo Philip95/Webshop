@@ -17,3 +17,7 @@ Route::get('/', 'ProductController@home')->name('home');
 
 Route::get('/produkte', 'ProductController@overview')->name('verwalten');
 Route::get('/produkte/delete/{p_id?}', 'ProductController@delete')->name('delete_product');
+
+Route::get('/produkte/newProduct', 'ProductController@showInsertForm')->name('insert_form');
+
+Route::post('/produkte/newProduct/insert', 'ProductController@insert')->name('insert');

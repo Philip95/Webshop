@@ -31,16 +31,14 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ route('verwalten') }}"> Produkte verwalten </a>
-                        <a class="dropdown-item" href="#">Neues Produkt anlegen</a>
-                        <a class="dropdown-item" href="#">Produkt l&ouml;schen</a>
-                        <a class="dropdown-item" href="#">Produkt bearbeiten</a>
+                        <a class="dropdown-item" href="{{ route('insert_form') }}">Neues Produkt anlegen</a>
                     </div>
                 </li>
 
             </ul>
 
             <button>
-                <img src="shopping-cart-icon-png-1.png" class="shoppingcart" alt="Warenkorb">
+                <img src="{{asset('shopping-cart-icon-png-1.png')}}" class="shoppingcart" alt="Warenkorb">
             </button>
         </div>
     </nav>

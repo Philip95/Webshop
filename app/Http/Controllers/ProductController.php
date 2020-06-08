@@ -43,5 +43,13 @@ class ProductController extends Controller
         return redirect(route('verwalten'));
     }
 
+    /**
+     * Returning view for inserting a product
+     *
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function showInsertForm() {
+        return view('verwaltung.newProduct');
+    }
 
 }
