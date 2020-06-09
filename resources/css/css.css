@@ -18,6 +18,12 @@ html, body {
 
 .position-ref {
     position: relative;
+    border-radius: 15px;
+    border-width: thin;
+}
+
+.img_padding {
+    padding-top: 5%;
 }
 
 .title {
@@ -54,4 +60,7 @@ img {
 
 .button_float_right {
     float: right;
+    margin-right: 5%;
+    margin-top: 3%;
 }
+

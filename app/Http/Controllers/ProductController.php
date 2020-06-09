@@ -13,7 +13,7 @@ class ProductController extends Controller
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function home() {
-        $products = Product::paginate(15);
+        $products = Product::paginate(14);
 
         return view('produktuebersicht', ['products' => $products]);
     }

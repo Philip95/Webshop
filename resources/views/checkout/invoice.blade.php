@@ -10,10 +10,13 @@
                         <div class="card-header">{{ __('Rechnungsadresse') }}</div>
 
                         <div class="card-body">
-                                <div class="form-group row">
-                                    <input id="frau" type="radio"  placeholder="Frau" name="geschlecht" value="Frau" required> Frau
-
-                                    <input id="mann" type="radio"  placeholder="Mann" name="geschlecht" value="Mann"> Mann
+                                <div class="form-group row col-md-10 col-lg-6">
+                                    <fieldset>
+                                        <input id="frau" type="radio"  placeholder="Frau" name="geschlecht" value="Frau" required>
+                                        <label for="frau">Frau</label>
+                                        <input id="mann" type="radio"  placeholder="Mann" name="geschlecht" value="Mann">
+                                        <label for="mann">Mann</label>
+                                    </fieldset>
                                 </div>
 
                                 <div class="form-group row">
