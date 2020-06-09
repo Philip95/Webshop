@@ -27,3 +27,6 @@ Route::post('/produkte/editForm/save', 'ProductController@update')->name('update
 
 Route::get('/warenkorb', 'ProductController@Warenkorb')->name('warenkorb');
 Route::get('/warenkorb/produkt', 'ProductController@product')->name('getProduct');
+
+Route::get('/warenkorb/checkout/', 'BezahlungController@checkout')->name('rechnungsadresse');
+Route::get('/warenkorb/checkout/shipping', 'BezahlungController@rechnungsadresse')->name('shipping');

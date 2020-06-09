@@ -16,4 +16,6 @@
         </table>
     </div>
 </div>
+
+<a class="btn" href=" {{ route('rechnungsadresse') }}"> Weiter</a>
 @endsection
