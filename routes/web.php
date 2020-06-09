@@ -30,3 +30,5 @@ Route::get('/warenkorb/produkt', 'ProductController@product')->name('getProduct'
 
 Route::get('/warenkorb/checkout/', 'BezahlungController@checkout')->name('rechnungsadresse');
 Route::get('/warenkorb/checkout/shipping', 'BezahlungController@rechnungsadresse')->name('shipping');
+
+Route::get('/warenkorb/checkout/shipping/payment', 'BezahlungController@choosePayment')->name('payment');

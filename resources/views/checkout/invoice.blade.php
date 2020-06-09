@@ -7,12 +7,9 @@
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="card borderform">
-                        <div class="card-header">{{ __('REGISTRIERUNG') }}</div>
+                        <div class="card-header">{{ __('Rechnungsadresse') }}</div>
 
                         <div class="card-body">
-                            <form method="POST" action="?" name="register">
-                            @csrf
-
                                 <div class="form-group row">
                                     <input id="frau" type="radio"  placeholder="Frau" name="geschlecht" value="Frau" required> Frau
 
@@ -97,15 +94,12 @@
                                     </div>
                                 </div>
 
-                                <input class="button" type="submit" id="versanddetails" value="Weiter" />
+                                <input class="button button_float_right" type="submit" id="versanddetails" value="Weiter" />
 
-                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </form>
-
-
 @endsection

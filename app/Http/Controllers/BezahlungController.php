@@ -32,8 +32,11 @@ class BezahlungController extends Controller
 
         Session::put("Gast", $gast);
 
-
         return view('checkout.shipping');
+    }
+
+    public function choosePayment() {
+        return view("checkout.paymentOptions");
     }
 
 }

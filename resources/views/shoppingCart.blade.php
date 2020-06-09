@@ -17,5 +17,5 @@
     </div>
 </div>
 
-<a class="btn" href=" {{ route('rechnungsadresse') }}"> Weiter</a>
+<a class="btn button_float_right" href=" {{ route('rechnungsadresse') }}" > Weiter</a>
 @endsection

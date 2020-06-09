@@ -51,3 +51,7 @@ img {
     width: 25px;
     height: 25px;
 }
+
+.button_float_right {
+    float: right;
+}
