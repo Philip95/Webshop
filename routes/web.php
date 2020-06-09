@@ -36,3 +36,5 @@ Route::get('/warenkorb/checkout/shipping/payment', 'BezahlungController@choosePa
 Route::get('/warenkorb/checkout/shipping/payment/overview', 'BezahlungController@overview')->name('summary');
 
 Route::post('/warenkorb/checkout/shipping/payment/overview/purchase', 'BezahlungController@purchase')->name('purchase');
+
+Route::get('success/', 'BezahlungController@success')->name('success');

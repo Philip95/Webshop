@@ -54,7 +54,11 @@ class BezahlungController extends Controller
     }
 
     public function purchase() {
+        return redirect()->route('success');
+    }
 
+    public function success() {
+        return view('checkout.success');
     }
 
 }
