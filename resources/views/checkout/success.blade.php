@@ -30,7 +30,7 @@
                         <p class="row justify-content-center"> Um zur Startseite zur&uuml;ckzukommen, dr&uuml;cken Sie bitte folgenden Link:</p>
 
                         <div class="row justify-content-center">
-                            <a href="{{ route('home') }}" class="button_float_right btn btn-info">Zur&uuml;ck zur Startseite</a>
+                            <a href="{{ route('home') }}" class="button_float_right btn btn-info" id="home" >Zur&uuml;ck zur Startseite</a>
                         </div>
                     </div>
                 </div>

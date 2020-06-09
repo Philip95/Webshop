@@ -40,3 +40,17 @@ for(let i = 0; i < sessionStorage.length; i++) {
         }
     });
 }
+
+$(function () {
+
+    $('#home').on('click', function(e) {
+        if ($(this).hasClass('post-page') == false)
+            clear();
+    });
+
+    function clear() {
+        console.log("Hallo");
+        sessionStorage.clear();
+    }
+});
+

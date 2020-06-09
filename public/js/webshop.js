@@ -30,3 +30,4 @@ function removeFromShoppingCart(id) {
     location.reload();
 }
 
+
