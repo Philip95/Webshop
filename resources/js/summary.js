@@ -49,7 +49,6 @@ $(function () {
     });
 
     function clear() {
-        console.log("Hallo");
         sessionStorage.clear();
     }
 });
