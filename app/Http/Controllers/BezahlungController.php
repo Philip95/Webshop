@@ -20,7 +20,7 @@ class BezahlungController extends Controller
 
         $gast = array(
             "geschlecht" => $request->geschlecht,
-            "vorname" => $request->vorname,
+            "vorname" => $request->name,
             "nachname" => $request->nachname,
             "adresse" => $request->adresse,
             "hausnummer" => $request->hausnummer,
@@ -35,8 +35,26 @@ class BezahlungController extends Controller
         return view('checkout.shipping');
     }
 
-    public function choosePayment() {
+    public function choosePayment(Request $request) {
+        $gast = Session::get("Gast");
+
+        $gast += ['versand' => $request->versand];
+
+        Session::put("Gast", $gast);
+
         return view("checkout.paymentOptions");
+    }
+
+    public function overview(Request $request) {
+        $gast = Session::get("Gast");
+        $gast += ['payment' => $request->payment];
+
+
+        return view('checkout.overview', ["user" => $gast]);
+    }
+
+    public function purchase() {
+
     }
 
 }

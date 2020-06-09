@@ -23,9 +23,7 @@ for(let i = 0; i < sessionStorage.length; i++) {
                 $('<td>').text(result.item_number),
                 $('<td>').text(result.name),
                 $('<td>').text(result.description),
-                $('<td>').text(result.price + " €"),
-                $('<td>').append('<button class="delete" id="'+ (id) +'" onclick="'+ (methode) +'">')
-
+                $('<td>').text(result.price + " €")
             ).appendTo('#warenkorb');
 
             if(counter === (sessionStorage.length - 1)) {
@@ -39,10 +37,6 @@ for(let i = 0; i < sessionStorage.length; i++) {
             } else {
                 counter++;
             }
-
-            $('.delete').html('Entfernen');
         }
     });
 }
-
-

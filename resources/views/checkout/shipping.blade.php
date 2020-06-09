@@ -2,6 +2,7 @@
 
 @section('content')
     <form action=" {{ route('payment') }}" method="get">
+        @csrf
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8">
@@ -10,6 +11,7 @@
 
                         <div class="card-body">
                             <input id="versand" type="radio" name="versand" value="Versand" required> Versand <br>
+
                             <input type="submit" value="Weiter" class="button_float_right">
                         </div>
                     </div>
