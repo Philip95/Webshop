@@ -21,7 +21,7 @@
                     <p><b>{{$product->name}}</b></p>
                     <span> <b>Beschreibung:</b> {{$product->description}}</span> <br>
                     <p> <b>Preis:</b> {{$product->price}} &#x80; </p>
-                    <button onclick="addToShoppingCart({{$product->p_id}})">
+                    <button onclick="addToShoppingCart({{$product->p_id}})" id="produkt{{$product->p_id}}">
                         Zum Warenkorb hinzuf&uuml;gen
                     </button>
                 </div>

@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
         <script src="{{ asset('js/webshop.js') }}"></script>
+        <script src="{{ mix('js/product_overview.js') }}"></script>
 
     </head>
     <body>

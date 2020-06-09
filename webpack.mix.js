@@ -12,9 +12,11 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');
+    .sass('resources/sass/app.scss', 'public/css')
+    .js('resources/js/product_overview.js', 'public/js');
 
 mix.js('resources/js/bootstrap.js', 'public/js');
 mix.styles('resources/css/css.css', 'public/css/all.css');
 
-mix.js('resources/js/shoppingcart.js', 'public/js')
+mix.js('resources/js/shoppingcart.js', 'public/js');
+
