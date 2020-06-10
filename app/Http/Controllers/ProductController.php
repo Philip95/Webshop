@@ -104,10 +104,21 @@ class ProductController extends Controller
         return redirect( route('verwalten') );
     }
 
+    /**
+     * Return blade for the shopping cart
+     *
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function warenkorb() {
         return view('shoppingCart');
     }
 
+    /**
+     * Return one product
+     *
+     * @param Request $request
+     * @return mixed
+     */
     public function product(Request $request) {
         return Product::find($_GET['id']);
     }
