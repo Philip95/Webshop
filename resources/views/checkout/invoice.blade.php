@@ -48,13 +48,13 @@
 
                                 <div class="form-group row">
                                     <div class="col-md-10 col-lg-6">
-                                        <input id="adresse" type="text" modifier="transparent" placeholder="Adresse*" float @error('adresse') is-invalid @enderror type="text" name="adresse" />
+                                        <input id="adresse" type="text" modifier="transparent" placeholder="Adresse*" float @error('adresse') is-invalid @enderror type="text" name="adresse" required />
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <div class="col-md-10 col-lg-6">
-                                        <input id="hausnummer" type="text" modifier="transparent" placeholder="Hausnummer*" float @error('hausnummer') is-invalid @enderror type="text" name="hausnummer" />
+                                        <input id="hausnummer" type="text" modifier="transparent" placeholder="Hausnummer*" float @error('hausnummer') is-invalid @enderror type="text" name="hausnummer" required />
                                     </div>
                                 </div>
 
@@ -70,13 +70,13 @@
 
 
                                     <div class="col-md-10 col-lg-6">
-                                        <input id="plz" type="text" pattern="^[0-9]*$" modifier="transparent" placeholder="Postleitzahl*" @error('plz') is-invalid @enderror type="text" name="plz" />
+                                        <input id="plz" type="text" pattern="^[0-9]*$" modifier="transparent" placeholder="Postleitzahl*" @error('plz') is-invalid @enderror type="text" name="plz" required />
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <div class="col-md-10 col-lg-6">
-                                        <input id="stadt" type="text" modifier="transparent" placeholder="Stadt*" float @error('stadt') is-invalid @enderror type="text" name="stadt" />
+                                        <input id="stadt" type="text" modifier="transparent" placeholder="Stadt*" float @error('stadt') is-invalid @enderror type="text" name="stadt" required />
                                     </div>
                                 </div>
 
